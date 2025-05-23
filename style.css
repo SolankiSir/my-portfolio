@@ -1,17 +1,37 @@
+/* Smooth scroll for anchor links */
 body {
   scroll-behavior: smooth;
 }
 
+/* Section spacing */
 section {
   padding-top: 60px;
 }
 
+/* Project Cards */
 .card img {
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
-/* Dark mode styles */
+/* Card hover animation */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills icons size */
+#skills i {
+  font-size: 2rem;
+}
+
+/* Skills text size */
+#skills p {
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
   color: #eee;
@@ -30,4 +50,25 @@ body.dark-mode .card {
 body.dark-mode .btn {
   border-color: #ccc;
   color: #ccc;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+/* Responsive button padding */
+button.btn {
+  padding: 0.375rem 0.75rem;
+}
+
+/* Back to Top Button styles */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* hidden by default */
+  z-index: 1000;
 }

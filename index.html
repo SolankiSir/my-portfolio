@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mayank - Web Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name - Web Developer, Designer, and Programmer. See my work and contact me.">
-  <meta name="keywords" content="Web Developer, Portfolio, HTML, CSS, JavaScript, Bootstrap">
-  <meta name="author" content="Your Name">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <form action="https://formspree.io/f/xkgrajov"method="POST">
 
+  <!-- SEO meta tags -->
+  <meta name="description" content="Portfolio of Mayank Solanki - Web Developer, Designer, and Programmer." />
+  <meta name="keywords" content="Web Developer, Portfolio, HTML, CSS, JavaScript, Bootstrap" />
+  <meta name="author" content="Mayank Solanki" />
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Mayank's Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <button id="darkModeToggle" class="btn btn-outline-light ms-3">🌙</button>
+      <button id="darkModeToggle" class="btn btn-outline-light ms-3" title="Toggle Dark Mode">🌙</button>
     </div>
   </div>
 </nav>
 
-<section class="py-5 text-center bg-light" id="about">
+<!-- About Section -->
+<section class="py-5 bg-light text-center text-md-start" id="about">
   <div class="container">
     <h1 class="display-4">Hello, I'm Mayank Solanki</h1>
     <p class="lead">Web Developer | UI Designer | Student</p>
@@ -42,17 +50,22 @@
   </div>
 </section>
 
+<!-- Projects Section -->
 <section class="py-5" id="projects">
   <div class="container">
     <h2 class="mb-4 text-center">Projects</h2>
     <div class="row">
+      <!-- Single project card -->
       <div class="col-md-4 mb-4">
         <div class="card h-100">
-          <img src="Screenshot 2025-05-23 092757.png" class="card-img-top" alt="Project Image">
+          <img src="Screenshot 2025-05-23 092757.png" class="card-img-top" alt="Project Image" />
           <div class="card-body">
             <h5 class="card-title">Project 1</h5>
-            <p class="card-text">Simple Website Of informative yoga learning space for beginners seeking a healthier lifestyle through guided yoga content.
-</p>
+            <p class="card-text">
+              <strong>Simple Website</strong> informative yoga learning space for beginners seeking a healthier lifestyle through guided yoga content.
+            </p>
+            <p class="text-muted">#HTML #Bootstrap #Responsive</p>
+            <!-- Modal trigger button -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">
               View Project
             </button>
@@ -62,55 +75,128 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="project1Modal" tabindex="-1">
+  <!-- Modal for Project 1 -->
+  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title"> Bliss Yoga Class – Yoga for Beginners</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <h5 class="modal-title" id="project1ModalLabel">Bliss Yoga Class – Yoga for Beginners</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="Screenshot 2025-05-23 094427.png" class="img-fluid mb-3" alt="Project Image">
-          <p>Bliss Yoga Class is a beginner-friendly yoga website designed to promote wellness and mindful living. Built with HTML 5, CSS, Bootstrap 5, and hosted as a simple static page, this site offers a clean and intuitive interface for users to explore yoga practices.</p>
-          <a href="https://final-project-murex-nu.vercel.app/" class="btn btn-outline-secondary">View Live</a>
-          <a href="https://github.com/SolankiSir/Final_Project.git" class="btn btn-outline-dark">GitHub Repo</a>
+          <img src="Screenshot 2025-05-23 094427.png" class="img-fluid mb-3" alt="Project Image" />
+          <p>
+            Bliss Yoga Class is a beginner-friendly yoga website designed to promote wellness and mindful living.
+            Built with HTML5, CSS, Bootstrap 5, and hosted as a static page.
+          </p>
+          <a href="https://final-project-murex-nu.vercel.app/" class="btn btn-outline-secondary me-2" target="_blank" rel="noopener">View Live</a>
+          <a href="https://github.com/SolankiSir/Final_Project.git" class="btn btn-outline-dark" target="_blank" rel="noopener">GitHub Repo</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-5 bg-light" id="contact">
+<!-- Skills Section -->
+<section class="py-5 bg-light" id="skills">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Skill Item -->
+      <div class="col-4 col-md-2 text-center">
+        <i class="bi bi-filetype-html"></i>
+        <p>HTML</p>
+      </div>
+      <div class="col-4 col-md-2 text-center">
+        <i class="bi bi-github"></i>
+        <p>GitHub</p>
+      </div>
+      <div class="col-4 col-md-2 text-center">
+        <i class="bi bi-filetype-php"></i>
+        <p>PHP</p>
+      </div>
+      <div class="col-4 col-md-2 text-center">
+        <i class="bi bi-filetype-py"></i>
+        <p>Python</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5" id="contact">
   <div class="container">
     <h2 class="text-center mb-4">Contact Me</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="w-75 mx-auto">
+    <form action="https://formspree.io/f/xkgrajov" method="POST" class="w-75 mx-auto">
       <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" name="name" class="form-control" required>
+        <label class="form-label" for="name">Name</label>
+        <input id="name" type="text" name="name" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" name="email" class="form-control" required>
+        <label class="form-label" for="email">Email</label>
+        <input id="email" type="email" name="email" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label class="form-label">Message</label>
-        <textarea name="message" class="form-control" rows="4" required></textarea>
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
       </div>
       <button type="submit" class="btn btn-dark">Send Message</button>
     </form>
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="bg-dark text-white text-center p-3">
+  <div class="mb-2">
+    <a href="https://github.com/SolankiSir" target="_blank" class="text-white me-3 fs-5" aria-label="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" class="text-white fs-5" aria-label="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+  </div>
   &copy; 2025 Mayank Solanki. All rights reserved.
 </footer>
 
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTop" title="Back to Top" class="btn btn-primary rounded-circle">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-  document.getElementById('darkModeToggle').addEventListener('click', () => {
+  // Dark Mode Toggle with Persistence
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  // Load theme from localStorage or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    const mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', mode);
+  });
+
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Show/hide back to top button on scroll
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
   });
 </script>
+
 </body>
 </html>
