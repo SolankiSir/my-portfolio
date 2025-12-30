@@ -31,6 +31,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -43,7 +44,13 @@
 <section class="py-5 bg-light text-center text-md-start" id="about">
   <div class="container">
     <h1 class="display-4">Hello, I'm Mayank Solanki</h1>
-    <p class="lead">Web Developer | UI Designer | Student</p>
+    <p class="lead">
+      <i class="bi bi-code-slash"></i> Web Developer |
+      <i class="bi bi-palette"></i> UI Designer |
+      <i class="bi bi-mortarboard"></i> Computer Engineer (Diploma) |
+      <i class="bi bi-mortarboard-fill"></i> Information Technology (Pursuing)
+    </p>
+
     <a href="resume.pdf" download class="btn btn-outline-primary mt-3">
       <i class="bi bi-download"></i> Download Resume
     </a>
@@ -54,45 +61,294 @@
 <section class="py-5" id="projects">
   <div class="container">
     <h2 class="mb-4 text-center">Projects</h2>
-    <div class="row">
-      <!-- Single project card -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="Screenshot 2025-05-23 092757.png" class="card-img-top" alt="Project Image" />
-          <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">
-              <strong>Simple Website</strong> informative yoga learning space for beginners seeking a healthier lifestyle through guided yoga content.
-            </p>
-            <p class="text-muted">#HTML #Bootstrap #Responsive</p>
-            <!-- Modal trigger button -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">
-              View Project
-            </button>
-          </div>
-        </div>
+
+    <!-- Scroll Buttons -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button class="btn btn-outline-dark" onclick="scrollProjects(-300)">❮</button>
+      <button class="btn btn-outline-dark" onclick="scrollProjects(300)">❯</button>
+    </div>
+
+    <!-- Horizontal Projects Wrapper -->
+    <div class="projects-wrapper" id="projectsContainer">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="Screenshot 2025-05-23 092757.png" alt="Bliss Yoga Project">
+        <h5>Project 1: Bliss Yoga Class</h5>
+        <p><strong>Simple Website:</strong> informative yoga learning space for beginners seeking a healthier lifestyle through guided yoga content.</p>
+        <p class="text-muted">#HTML #Bootstrap #Responsive</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">
+          View Project
+        </button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="Screenshot 2025-12-27 135915.png" alt="Expense Tracker Project">
+        <h5>Project 2: Expense Tracker</h5>
+        <p><strong>Web App:</strong> track income & expenses in real time.</p>
+        <p class="text-muted">#HTML #Python #CSS</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">
+          View Project
+        </button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="Screenshot 2025-12-27 220403.png" alt="Weather Dashboard Project">
+        <h5>Project 3: Weather Dashboard</h5>
+        <p><strong>Modern Dashboard:</strong> search any city and view current weather conditions, temperature, and additional climate details using live data from a weather API.</p>
+        <p class="text-muted">#Svelte #HTML #TypeScript #JavaScript</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">
+          View Project
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Project Modals -->
+<!-- Project 1 Modal -->
+<div class="modal fade" id="project1Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bliss Yoga Class – Yoga for Beginners</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="Screenshot 2025-05-23 094427.png" class="img-fluid mb-3" alt="Project 1">
+        <p>Bliss Yoga Class is a beginner-friendly yoga website designed to promote wellness and mindful living. Built with HTML5, CSS, Bootstrap 5, and hosted as a static page.</p>
+        <a href="https://final-project-murex-nu.vercel.app/" class="btn btn-outline-secondary me-2" target="_blank">View Live</a>
+        <a href="https://github.com/SolankiSir/Final_Project.git" class="btn btn-outline-dark" target="_blank">GitHub Repo</a>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Modal for Project 1 -->
-  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project1ModalLabel">Bliss Yoga Class – Yoga for Beginners</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="Screenshot 2025-05-23 094427.png" class="img-fluid mb-3" alt="Project Image" />
-          <p>
-            Bliss Yoga Class is a beginner-friendly yoga website designed to promote wellness and mindful living.
-            Built with HTML5, CSS, Bootstrap 5, and hosted as a static page.
-          </p>
-          <a href="https://final-project-murex-nu.vercel.app/" class="btn btn-outline-secondary me-2" target="_blank" rel="noopener">View Live</a>
-          <a href="https://github.com/SolankiSir/Final_Project.git" class="btn btn-outline-dark" target="_blank" rel="noopener">GitHub Repo</a>
-        </div>
+<!-- Project 2 Modal -->
+<div class="modal fade" id="project2Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Expense Tracker Web Application</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
+      <div class="modal-body">
+        <img src="Screenshot 2025-12-27 135510.png" class="img-fluid mb-3" alt="Project 2">
+        <p>Expense Tracker helps users manage personal finances with real-time tracking. Users can add, view, and delete transactions while automatically calculating total balance, income, and expenses through a responsive interface.</p>
+        <a href="https://expense-tracker-etav.onrender.com/" class="btn btn-outline-secondary me-2" target="_blank">View Live</a>
+        <a href="https://github.com/SolankiSir/Expense-Tracker.git" class="btn btn-outline-dark" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3 Modal -->
+<div class="modal fade" id="project3Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Weather Forecast Dashboard</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="Screenshot 2025-12-27 220927.png" class="img-fluid mb-3" alt="Project 3">
+        <p>Responsive web application displaying real-time weather data using the <strong>OpenWeather API</strong>. Built with SvelteKit and JavaScript, optimized for desktop and mobile.</p>
+        <a href="https://weather-black-one.vercel.app/" class="btn btn-outline-secondary me-2" target="_blank">View Live</a>
+        <a href="https://github.com/SolankiSir/Weather.git" class="btn btn-outline-dark" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Certificates Section -->
+<section class="py-5" id="certificates">
+  <div class="container">
+    <h2 class="text-center mb-4">Certificates</h2>
+    <div class="cert-wrapper">
+
+      <!-- Left Button -->
+      <button class="scroll-btn left" onclick="scrollCertificates(-1)">&lt;</button>
+
+      <!-- Certificate Cards -->
+      <div class="cert-container" id="certContainer">
+
+          <!-- Certificate Card 4 -->
+
+          <div class="card cert-card h-100">
+            <img src="Screenshot 2025-12-30 184513.png" class="card-img-top" alt="Web Certificate">
+            <div class="card-body text-center">
+              <h5 class="card-title">The Hidden Hardware of AI</h5>
+              <p class="text-muted">VECTOR INDIA · 2025</p>
+              <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert4Modal">
+                View
+              </button>
+            </div>
+          </div>
+
+
+          <!-- Modal for Certificate 4 -->
+
+          <div class="modal fade" id="cert4Modal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">CERTIFICATE OF PARTICIPATION</h5>
+                  <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img src="Screenshot 2025-12-30 184549.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificate 2 -->
+        <div class="card cert-card h-100">
+          <img src="Screenshot 2025-12-30 135608.png  " class="card-img-top" alt="Web Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">Employability Skills – JobReady</h5>
+            <p class="text-muted">WADHWANI FOUNDATION · 2024</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert2Modal">View</button>
+          </div>
+        </div>
+
+        <div class="modal fade" id="cert2Modal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">CERTIFICATE OF COMPLETION</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="Screenshot 2025-12-30 135059.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 1 -->
+        <div class="card cert-card h-100">
+          <img src="Screenshot 2025-12-30 134435.png" class="card-img-top" alt="Python Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">The Project Expo </h5>
+            <p class="text-muted">GPB · 2025</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert1Modal">View</button>
+          </div>
+        </div>
+
+        <div class="modal fade" id="cert1Modal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">CERTIFICATE OF PARTICIPATION</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="Screenshot 2025-12-30 134854.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Certificate Card 3 -->
+
+        <div class="card cert-card h-100">
+          <img src="Screenshot 2025-12-30 140452.png" class="card-img-top" alt="Web Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">Flask Online Hackathon</h5>
+            <p class="text-muted">SHIVAI digital media · 2025</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert3Modal">
+              View
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Modal for Certificate 3 -->
+
+        <div class="modal fade" id="cert3Modal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">CERTIFICATE OF PARTICIPATION IN FLASK ONLINE HACKATHON</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="Hackathon certificate.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Certificate Card 5 -->
+
+        <div class="card cert-card h-100">
+          <img src="Screenshot 2025-12-30 211724.png" class="card-img-top" alt="Web Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">TechnoLympics</h5>
+            <p class="text-muted">SVBIT · 2025</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert5Modal">
+              View
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Modal for Certificate 5 -->
+
+        <div class="modal fade" id="cert5Modal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">CERTIFICATE OF PARTICIPATION IN TechnoLympics</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="Screenshot 2025-12-30 211820.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate Card 6 -->
+
+        <div class="card cert-card h-100">
+          <img src="Screenshot 2025-12-30 212610.png" class="card-img-top" alt="Web Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">INTERNSHIP-WEB DESIGNING</h5>
+            <p class="text-muted">SHIVAI digital media · 2025</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert6Modal">
+              View
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Modal for Certificate 6 -->
+
+        <div class="modal fade" id="cert6Modal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">CERTIFICATE OF INTERNSHIP </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="Screenshot 2025-12-30 212726.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Right Button -->
+      <button class="scroll-btn right" onclick="scrollCertificates(1)">&gt;</button>
+
     </div>
   </div>
 </section>
@@ -100,28 +356,73 @@
 <!-- Skills Section -->
 <section class="py-5 bg-light" id="skills">
   <div class="container">
-    <h2 class="text-center mb-4">Skills</h2>
-    <div class="row g-4 justify-content-center">
-      <!-- Skill Item -->
-      <div class="col-4 col-md-2 text-center">
-        <i class="bi bi-filetype-html"></i>
-        <p>HTML</p>
-      </div>
-      <div class="col-4 col-md-2 text-center">
-        <i class="bi bi-github"></i>
-        <p>GitHub</p>
-      </div>
-      <div class="col-4 col-md-2 text-center">
-        <i class="bi bi-filetype-php"></i>
-        <p>PHP</p>
-      </div>
-      <div class="col-4 col-md-2 text-center">
-        <i class="bi bi-filetype-py"></i>
-        <p>Python</p>
+    <h2 class="text-center mb-5">Skills</h2>
+
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h4>💻 Programming Languages</h4>
+      <div class="skill-row">
+        <span class="skill-badge"><i class="bi bi-filetype-py"></i> Python ⭐</span>
+        <span class="skill-badge"><i class="bi bi-cup-hot"></i> Java</span>
+        <span class="skill-badge"><i class="bi bi-code-slash"></i> C / C++</span>
+        <span class="skill-badge"><i class="bi bi-braces"></i> JavaScript</span>
+        <span class="skill-badge"><i class="bi bi-filetype-php"></i> PHP</span>
       </div>
     </div>
+
+    <!-- Web Development -->
+    <div class="skill-category">
+      <h4>🌐 Web Development</h4>
+      <div class="skill-row">
+        <span class="skill-badge"><i class="bi bi-filetype-html"></i> HTML5</span>
+        <span class="skill-badge"><i class="bi bi-filetype-css"></i> CSS3</span>
+        <span class="skill-badge"><i class="bi bi-lightning"></i> JavaScript</span>
+        <span class="skill-badge"><i class="bi bi-phone"></i> Responsive Design</span>
+        <span class="skill-badge"><i class="bi bi-diagram-3"></i> REST API</span>
+        <span class="skill-badge"><i class="bi bi-plug"></i> API Integration</span>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category">
+      <h4>⚙️ Frameworks & Tools</h4>
+      <div class="skill-row">
+        <span class="skill-badge"><i class="bi bi-git"></i> Git & GitHub</span>
+        <span class="skill-badge"><i class="bi bi-android2"></i> Android Studio</span>
+        <span class="skill-badge"><i class="bi bi-code-square"></i> VS Code</span>
+        <span class="skill-badge"><i class="bi bi-bootstrap-fill"></i> Bootstrap</span>
+        <span class="skill-badge"><i class="bi bi-braces"></i> Laravel</span>
+        <span class="skill-badge"><i class="bi bi-server"></i> Laravel REST API</span>
+        <span class="skill-badge"><i class="bi bi-wordpress"></i> WordPress</span>
+        <span class="skill-badge"><i class="bi bi-cpu"></i> Machine Learning</span>
+        <span class="skill-badge"><i class="bi bi-cpu"></i> Arduino</span>
+        <span class="skill-badge"><i class="bi bi-wifi"></i> IoT Systems</span>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="skill-category">
+      <h4>📱 Mobile Development</h4>
+      <div class="skill-row">
+        <span class="skill-badge"><i class="bi bi-phone"></i> Android App Development</span>
+        <!--<span class="skill-badge"><i class="bi bi-layout-text-window"></i> XML Layouts</span>
+        <span class="skill-badge"><i class="bi bi-arrow-repeat"></i> Activities & Intents</span>
+        <span class="skill-badge"><i class="bi bi-cloud"></i> Firebase</span>-->
+      </div>
+    </div>
+
+   <div class="skill-category">
+    <h4>🗄️ Databases</h4>
+    <div class="skill-row">
+    <span class="skill-badge"><i class="bi bi-database"></i> MySQL</span>
+    <span class="skill-badge"><i class="bi bi-database"></i> SQLite</span>
+    <span class="skill-badge"><i class="bi bi-database-fill"></i> MongoDB</span>
+  </div>
+</div>
+
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section class="py-5" id="contact">
@@ -148,10 +449,10 @@
 <!-- Footer -->
 <footer class="bg-dark text-white text-center p-3">
   <div class="mb-2">
-    <a href="https://github.com/SolankiSir" target="_blank" class="text-white me-3 fs-5" aria-label="GitHub">
+    <a href="https://github.com/SolankiSir" target="_blank" class="text-white me-3 fs-5">
       <i class="bi bi-github"></i>
     </a>
-    <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" class="text-white fs-5" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/mayank004" target="_blank" class="text-white fs-5">
       <i class="bi bi-linkedin"></i>
     </a>
   </div>
@@ -167,35 +468,63 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // Dark Mode Toggle with Persistence
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* 🌙 Dark Mode Toggle */
   const darkModeToggle = document.getElementById('darkModeToggle');
-
-  // Load theme from localStorage or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-
-  darkModeToggle.addEventListener('click', () => {
+  if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+  darkModeToggle?.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    const mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', mode);
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   });
 
-  // Scroll to top function
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  /* ⬆️ Back to Top */
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (backToTop) backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  window.scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  /* 📦 Projects Horizontal Scroll */
+  window.scrollProjects = (value) => {
+    const projectsContainer = document.getElementById("projectsContainer");
+    projectsContainer?.scrollBy({ left: value, behavior: "smooth" });
+  };
+
+  /* 🎓 Certificates Auto Scroll */
+  const certContainer = document.getElementById("certContainer");
+  const scrollAmount = 300;
+  let autoScroll;
+  if (certContainer) {
+    window.scrollCertificates = (dir) => certContainer.scrollLeft += dir * scrollAmount;
+
+    const startAutoScroll = () => autoScroll = setInterval(() => {
+      if (certContainer.scrollLeft + certContainer.clientWidth >= certContainer.scrollWidth) certContainer.scrollLeft = 0;
+      else certContainer.scrollLeft += scrollAmount;
+    }, 2500);
+
+    const stopAutoScroll = () => clearInterval(autoScroll);
+
+    startAutoScroll();
+    certContainer.addEventListener("mouseenter", stopAutoScroll);
+    certContainer.addEventListener("mouseleave", startAutoScroll);
   }
 
-  // Show/hide back to top button on scroll
-  window.addEventListener('scroll', () => {
-    const btn = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      btn.style.display = 'block';
-    } else {
-      btn.style.display = 'none';
+  /* 🎯 Skills Scroll Animation */
+const skillCategories = document.querySelectorAll('.skill-category');
+
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
     }
   });
+}, { threshold: 0.2 });
+
+skillCategories.forEach(cat => skillObserver.observe(cat));
+
+
+});
 </script>
 
 </body>
