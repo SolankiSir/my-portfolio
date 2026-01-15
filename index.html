@@ -456,7 +456,7 @@
       <i class="bi bi-linkedin"></i>
     </a>
   </div>
-  &copy; 2025 Mayank Solanki. All rights reserved.
+  <p>&copy; <span id="year"></span> Mayank Solanki. All rights reserved.</p>
 </footer>
 
 <!-- Back to Top Button -->
@@ -525,6 +525,9 @@ skillCategories.forEach(cat => skillObserver.observe(cat));
 
 
 });
+
+/* copy Right */
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
